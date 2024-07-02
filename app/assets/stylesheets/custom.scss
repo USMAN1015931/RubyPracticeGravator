@@ -1,0 +1,87 @@
+  #logo {
+  float: left;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+  
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.temp {
+  background-color: green !important;
+} 
+
+
+.center{
+  
+  text-align:center
+}
+.custom-jumbotron {
+  //background-image: asset-url('images.jpeg'); /* For SCSS */
+  background-image: url('/assets/images.jpeg'); /* For plain CSS */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  padding: 2rem 1rem;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-jumbotron h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+.custom-jumbotron h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+
+}
+
+
+.btn-xlarge{
+  background-color:green !important;
+}
+.btn-xlarge:hover {
+  color: #fff  !important;
+  text-decoration: none;
+}
+
+.footer{
+  
+
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top:  1pc solid#eaeaea;
+  color: #777;
+}
+
+.footer a{
+  color: #555;
+}
+
+.footer a:hover{
+  color: #222;
+
+}
+
+.footer small{
+  float: left;
+}
+.footer ul{
+  float: right;
+}
