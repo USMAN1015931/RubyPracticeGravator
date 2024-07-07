@@ -85,3 +85,30 @@
 .footer ul{
   float: right;
 }
+
+.well a{
+  color: green !important;
+}
+
+
+
+
+.card-body {
+  position: relative;
+  min-height: 200px; /* Adjust as needed */
+}
+
+.d-flex.align-items-end {
+  position: relative;
+  height: 100%;
+}
+
+.d-flex.flex-column.align-items-end {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.chef_info {
+  margin-top: 10px;
+}
