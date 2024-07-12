@@ -26,11 +26,37 @@ class RecipesController < ApplicationController
      	redirect_to recipe_path(@recipe)
 
      else
-       render 'new'
+       render 'new', status: :unprocessable_entity
      end	
+    end
+
+
+    def edit
+    @recipe = Recipe.find(params[:id])
+
+    end
+
+    def update
+
+     @recipe = Recipe.find(params[:id])	
+
+     if @recipe = Recipe.update(recipe_params)
+       flash[:success]  = "Recipe is updated successfully"
+       redirect_to recipe_path(@recipe)
+     else
+     	render 'edit'
+     end
+    end
 
 
 
+    
+
+	def destroy
+   # binding.pry
+	  Recipe.find(params[:id]).destroy
+	  flash[:success] = "Recipe deleted successfully"
+	  redirect_to recipes_path
 	end
 
 
