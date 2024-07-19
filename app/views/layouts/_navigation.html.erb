@@ -19,7 +19,11 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><%= link_to "Create a new recipe", new_recipe_path %></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            
+
+          <li><%= link_to 'Log in', login_path %></li>
+          <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+            <li><a class="dropdown-item" href="#"><%= link_to  "Chefs", chefs_path %></a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Separated link</a></li>

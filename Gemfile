@@ -8,9 +8,6 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
-
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -20,10 +17,8 @@ gem "jsbundling-rails"
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
 
-
 gem 'rails-ujs'
 gem 'jquery-rails'
-
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
@@ -41,7 +36,11 @@ gem "jbuilder"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
- gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
+gem "will_paginate", '~> 3.3.0'
+gem "bootstrap-will_paginate", '0.0.10'
+
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -57,7 +56,6 @@ group :development, :test do
 end
 
 group :development, :test do
-
   gem "sqlite3", "~> 1.4"
   gem 'rails-controller-testing'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -81,8 +79,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-
 group :production do
   gem 'pg'
-  
 end

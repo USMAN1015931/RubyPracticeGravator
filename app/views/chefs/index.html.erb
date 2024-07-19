@@ -1,0 +1,21 @@
+<%= render 'shared/pages_title', title: "Showing all chefs" %>
+
+<div class="text-center">
+  <%= will_paginate %>
+  <% @chefs.each do |chef| %>
+    <ul class="list-unstyled">
+      <div class="row justify-content-center">
+        <div class="card col-md-4">
+          <div class="card-body">
+            <li><%= link_to gravatar_for(chef), chef_path(chef) %></li>
+            <li class="chef-title mt-3"><%= link_to chef.chefname.capitalize, chef_path(chef) %></li>
+            <li class="mt-2"><small><%= pluralize(chef.recipes.count, "recipe") if chef.recipes.any? %></small></li>
+            <li><%= link_to "Delete this chef", chef_path(chef), 
+          method: :delete, 
+           data: {confirm: "Are you sure you want to delete this chef and all associated recipes?"} %></li>           </div>
+        </div>
+      </div>
+    </ul>      
+  <% end %>
+  <%= will_paginate %>
+</div>
